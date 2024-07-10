@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  quicknc:
+    build: .
+    network_mode: host
+    restart: always
+    environment:
+      - PASSWORD=114514
+      - PORT_MIN=10000
+      - PORT_MAX=20000
+      - MAIN_PORT=19999
+      - SOLVER_URL=https://buuoj.cn/files/312e52f8ec473c9d4f4f18581aa3c37c/pow.py
+      - CHALLENGE_DIFFICULTY=5000
